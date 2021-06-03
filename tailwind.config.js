@@ -5,9 +5,9 @@ module.exports = {
     colors: {
       // Configure your color palette here
       brand: {
-        primary: "#1F1F4B",
-        secondary: "rgba(255, 255, 255, 0.07)",
-        tertiary: "#2B2D6B",
+        primary: "#FFFAFA",
+        secondary: "#F7F7F8",
+        tertiary: "#022F96",
       },
     },
     extend: {},

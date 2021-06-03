@@ -1,0 +1,73 @@
+.createPostFieldContainer {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f7f7f8;
+  border-radius: 5px;
+  /* margin-top: 4rem; */
+  cursor: pointer !important;
+  border: 1px solid rgba(232, 232, 232, 0.5);
+}
+.userImg {
+  object-fit: cover;
+}
+
+.profileImg {
+  width: 10%;
+}
+
+.inputField {
+  width: 75%;
+  display: flex;
+  align-items: center;
+}
+.inputField textarea {
+  resize: none;
+  width: 100%;
+  height: 100% !important;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: white;
+  padding: 0.25rem;
+  color: black;
+  font-size: 12px;
+}
+
+.inputField textarea::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+}
+
+.createPostFieldContainer {
+}
+
+.profileImg,
+.postIconsContainer {
+  width: 10%;
+  height: 100%;
+}
+
+.postIconsContainer {
+  width: 15%;
+  padding-right: 0.75rem;
+  cursor: pointer;
+}
+
+.inputField textarea::-webkit-scrollbar {
+  width: 5px;
+}
+
+.inputField textarea::-webkit-scrollbar-track {
+}
+
+.inputField textarea::-webkit-scrollbar-thumb {
+  background: #022f96;
+}
+
+@media only screen and (max-width: 768px) {
+  .createPostFieldContainer {
+    margin-top: 1rem;
+  }
+}

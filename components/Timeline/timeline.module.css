@@ -1,0 +1,49 @@
+.timeLineContainer {
+  max-width: 1280px;
+  width: 100%;
+  height: auto !important;
+}
+
+.followersSection {
+  width: 20%;
+}
+
+.leftSide {
+  width: 53%;
+}
+
+.rightSide {
+  width: 25%;
+}
+
+.followerProfile {
+  height: 4rem;
+  width: 100%;
+  padding: 0.25rem;
+  margin-top: 0.25rem;
+  background-color: #f7f7f8;
+}
+
+.followerProfile img {
+  width: 2rem;
+  height: 2rem;
+  object-fit: cover;
+}
+
+.followerProfile span {
+  margin-left: 0.5rem;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 768px) {
+  .followersSection {
+    display: none;
+  }
+  .rightSide {
+    display: none;
+  }
+  .leftSide {
+    width: 100%;
+  }
+}

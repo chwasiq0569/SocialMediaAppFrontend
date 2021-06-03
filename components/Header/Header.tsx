@@ -6,26 +6,38 @@ import { MdStarBorder } from "react-icons/md";
 import { BsBookmarks } from "react-icons/bs";
 import { BsBell } from "react-icons/bs";
 import Image from "next/image";
-
+import styles from "./header.module.css";
 export interface HeaderProps {}
 
 const Header: React.FC<HeaderProps> = () => {
   const iconStyles = {
-    color: "#ccffff",
+    color: "#b9b9b9",
     fontSize: "2rem",
     cursor: "pointer",
-    backgroundColor: "rgba(255, 255, 255, 0.1)",
+    backgroundColor: "none",
     padding: "0.425rem",
     borderRadius: "0.25rem",
     marginBottom: "0.25rem",
   };
 
-  const brandIconStyle = {};
-
   return (
-    <div className="sm: w-full md:bg-gray-800 fixed bottom-0 lg:relative max-w-screen-xl bg-brand-primary h-12 flex flex-row justify-between px-2">
-      <div className="xsm: hidden md:block w-12 h-12 flex justify-center items-center">
-        <div className="w-12 h-12 flex justify-center items-center">
+    <div
+      className={
+        styles.headerContainer +
+        " sm: w-full fixed bottom-0 md: lg:relative max-w-screen-xl bg-brand-primary h-12 flex flex-row justify-between px-2"
+      }
+    >
+      <div
+        className={
+          styles.HeaderLeftSide + " w-12 h-12 flex justify-center items-center"
+        }
+      >
+        <div
+          className={
+            styles.brandIconContainer +
+            " w-12 h-12 flex justify-center items-center"
+          }
+        >
           <Image
             src="/assets/icons/brandicon.svg"
             alt="BrandIcon"
@@ -34,20 +46,28 @@ const Header: React.FC<HeaderProps> = () => {
           />
         </div>
       </div>
-      <div className="sm: w-full md:w-2/4  h-12 rounded-b-2xl flex flex-row justify-between items-center px-14">
+      <div
+        className={
+          styles.menuContainer +
+          " w-full md:w-2/4 h-12 rounded-b-xl bg-brand-secondary flex flex-row justify-between items-center lg:w-2/4 "
+        }
+      >
         <AiOutlineHome style={iconStyles} />
         <BsBell style={iconStyles} />
         <MdChatBubbleOutline style={iconStyles} />
         <BsBookmarks style={iconStyles} />
       </div>
       <div className="h-12 flex justify-center items-center">
-        <div className="w-10 h-10 flex justify-center items-center">
-          <Image
+        <div
+          className={
+            styles.profileImageContainer +
+            " w-10 h-10 flex justify-center items-center"
+          }
+        >
+          <img
             className="rounded-full"
             src="/assets/icons/l60Hf.png"
             alt="User Placeholder Image"
-            width={"100%"}
-            height={"98%"}
           />
         </div>
       </div>

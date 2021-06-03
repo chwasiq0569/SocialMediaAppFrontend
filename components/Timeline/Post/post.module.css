@@ -1,0 +1,78 @@
+.postContainer {
+  margin-top: 1rem;
+  width: 100%;
+  /* height: 22rem; */
+  background-color: #f7f7f8;
+  border-radius: 5px;
+  padding: 0 10px;
+  border: 1px solid rgba(232, 232, 232, 0.5);
+}
+
+.postHeader {
+  width: 100%;
+  height: 4rem;
+}
+
+.userProfileContainer {
+  width: 3rem;
+  height: 3rem;
+  padding: 0.1rem;
+}
+
+.userProfileContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.userInfo {
+  margin-left: 0.75rem;
+}
+
+.userInfo p {
+  line-height: 1.25;
+}
+
+.userInfo .userName {
+  font-weight: 500;
+}
+
+.userInfo .postTimeStamp {
+  font-size: 12px;
+}
+
+.postImgContainer {
+  height: 34rem;
+  margin-top: 1rem;
+}
+
+.postImgContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.reactionsContainer {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.reactionIcons {
+  display: flex;
+  align-items: center;
+}
+
+.iconsContianer {
+  display: flex;
+  align-items: center;
+  margin-left: 0.75rem;
+}
+
+.iconsContianer span {
+  font-size: 14px;
+  color: #000000;
+  margin-left: 0.25rem;
+}
