@@ -1,17 +1,3 @@
-.authPageContainer {
-  width: 100%;
-  height: 100vh;
-  background-color: #f7f7f8;
-  display: flex;
-  align-items: center;
-}
-.leftSide,
-.rightSide {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
 .signInForm {
   padding: 1.5rem 1.5rem;
   width: 28rem;
@@ -38,10 +24,17 @@
   background-color: #2070e0;
   font-weight: 500;
   color: white;
-  border: none;
+  border: 2px solid #2070e0;
+}
+.loginBtn:hover {
+  background-color: white;
+  border: 2px solid #2070e0;
+  font-weight: 500;
+  color: #2070e0;
+  transition: all 0.4s ease;
 }
 
-.forgerPassword {
+.forgetPassword {
   margin-top: 1rem;
   text-align: center;
   color: #2070e0;
@@ -52,11 +45,13 @@
   background-color: #3daa28;
   color: white;
   font-weight: 500;
-  border: none;
+  border: 2px solid #3daa28;
 }
-/* .authForm {
-  width: 75%;
-  border: 1px solid red;
-  display: flex;
-  flex-direction: column;
-} */
+
+.createNewAcc:hover {
+  background-color: white;
+  border: 2px solid #3daa28;
+  font-weight: 500;
+  color: #3daa28;
+  transition: all 0.4s ease;
+}

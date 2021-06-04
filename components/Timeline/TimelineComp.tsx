@@ -5,9 +5,9 @@ import Post from "./Post/Post";
 import Suggestions from "./Suggestions/Suggestion";
 import styles from "./timeline.module.css";
 
-export interface TimelineProps {}
+export interface TimelineCompProps {}
 
-const Timeline: React.FC<TimelineProps> = () => {
+const TimelineComp: React.FC<TimelineCompProps> = () => {
   return (
     <div className={"px-2 flex justify-between " + styles.timeLineContainer}>
       <div className={styles.followersSection}>
@@ -74,4 +74,4 @@ const Timeline: React.FC<TimelineProps> = () => {
   );
 };
 
-export default Timeline;
+export default TimelineComp;

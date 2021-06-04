@@ -61,11 +61,12 @@ const Header: React.FC<HeaderProps> = () => {
         <div
           className={
             styles.profileImageContainer +
-            " w-10 h-10 flex justify-center items-center"
+            "h-10 flex justify-center items-center"
           }
         >
+          <p className={styles.userName}>chwasiq0569</p>
           <img
-            className="rounded-full"
+            className={styles.placeholderImage}
             src="/assets/icons/l60Hf.png"
             alt="User Placeholder Image"
           />

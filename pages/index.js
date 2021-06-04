@@ -1,8 +1,5 @@
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import Header from "../components/Header/Header";
-import Timeline from "../components/Timeline/Timeline";
 import Auth from "../pages/Auth";
 
 export default function Home() {
@@ -15,8 +12,6 @@ export default function Home() {
       </Head>
 
       <main className="w-full	flex flex-col	items-center bg-brand-primary">
-        {/* <Header /> */}
-        {/* <Timeline /> */}
         <Auth />
       </main>
     </div>
