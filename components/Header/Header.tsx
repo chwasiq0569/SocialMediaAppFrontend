@@ -19,7 +19,7 @@ const Header: React.FC<HeaderProps> = () => {
         </div>
       </div>
       <div className={styles.middleSide}>
-        <div className={styles.iconsContainer}>
+        <div className={styles.middle_iconsContainer}>
           <AiFillHome className={styles.middle_iconStyles} />
           <IoMdVideocam className={styles.middle_iconStyles} />
           <MdBookmark className={styles.middle_iconStyles} />
@@ -27,7 +27,7 @@ const Header: React.FC<HeaderProps> = () => {
         </div>
       </div>
       <div className={styles.rightSide}>
-        <div className={styles.iconsContainer}>
+        <div className={styles.right_iconsContainer}>
           <MdNotifications className={styles.end_iconStyles} />
           <IoMdArrowDropdownCircle className={styles.end_iconStyles} />
         </div>
