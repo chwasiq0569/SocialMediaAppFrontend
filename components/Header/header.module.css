@@ -1,65 +1,60 @@
 .headerContainer {
+  width: 100%;
+  max-width: 1280px;
+  height: 3rem;
+  background-color: #0f0f13;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  border-bottom: 1px solid #3d3f42;
+  justify-content: space-between;
 }
 
-.brandIconContainer {
+.leftSide {
+  width: 25%;
 }
 
-.menuContainer {
-  /* margin-right: auto; */
+.leftSide .logoContainer {
+  width: 2.25rem;
+  height: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.profileImageContainer {
-  /* width:  25px;
-  height: 25px; */
-}
-.placeholderImage {
-  width: 2.5rem;
-  height: 2.5rem;
-  object-fit: cover;
-  border-radius: 1.25rem;
+.leftSide .logoContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
-.userName {
-  margin-right: 0.5rem;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  /* border-bottom: 1px solid black; */
-}
-.userName:hover {
-  color: blue;
-  border-bottom: 1px solid blue;
+.iconsContainer {
+  display: flex;
 }
 
-.menuContainer {
-  padding: 0rem 3.5rem;
-}
-@media only screen and (max-width: 768px) {
-  .brandIconContainer {
-    display: none;
-  }
-  .headerContainer {
-    background-color: #f2f7fb;
-  }
-  .menuContainer {
-    width: 100%;
-    margin-right: 2rem;
-  }
-  .HeaderLeftSide {
-    display: none;
-  }
-  .menuContainer {
-    padding: 0rem 1rem;
-  }
+.middle_iconStyles {
+  color: white;
+  font-size: 1.5rem;
+  margin-left: 4.5rem;
+  opacity: 0.6;
 }
 
-@media only screen and (max-width: 640px) {
-  .brandIconContainer {
-    display: none;
-  }
-  .headerContainer {
-    background-color: #f2f7fb;
-  }
-  .menuContainer {
-    justify-content: space-between;
-  }
+.end_iconStyles {
+  color: white;
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  opacity: 0.6;
+}
+
+.middleSide {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rightSide {
+  width: 25%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
