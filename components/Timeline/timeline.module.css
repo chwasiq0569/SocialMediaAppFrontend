@@ -1,5 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;1,300&display=swap");
 .timelineWrapper {
   max-width: 1280px;
   width: 100%;
-  border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+  background-color: #0f0f13;
+  padding-top: 1rem;
+}
+.profileInfoSection {
+  width: 20%;
+}
+
+.userProfile {
+  height: 4.5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 1.5rem;
+  background-color: rgba(61, 63, 66, 0.35);
+}
+
+.followerProfile {
+  height: 4.5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 1.5rem;
+  height: 3.5rem;
+}
+
+.profilePicContainer {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.profilePicContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.userFullName {
+  color: black;
+  font-weight: 500;
+  margin-left: 0.75rem;
+  color: white;
+}
+
+.timeline {
+  width: 58%;
+}
+
+.suggestionsAndEvents {
+  width: 20%;
+}
+
+.followersContainer {
+  margin-top: 1rem;
+  padding: 1.5rem 0;
+  background-color: rgba(61, 63, 66, 0.35);
+}
+
+.followersContainer .followersTitleSection {
+  display: flex;
+  justify-content: space-between;
+  padding: 0rem 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.followersContainer .followersTitleSection p {
+  color: white;
+}
+
+.followersGrid {
+}
+
+.followersText {
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.9px;
+}
+
+.allLink {
+  color: #2070e0 !important;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.storiesContainer {
+  width: 100%;
+  height: 12rem;
+  position: relative;
+}
+
+.storyContainer {
+  background-color: url("/static/assets/images/profileimg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 7.5rem;
+  height: 100%;
+}
+
+.dullStoryWrapper {
+  position: absolute;
+  width: 7.5rem;
+  height: 100%;
+  background-color: rgba(61, 63, 66, 0.2);
+  /* opacity: 0.1; */
+}
+
+.addStoryBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 7.5rem;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.addBtnContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.addBtnContainer {
+  border: 2px solid #2070e0;
+}
+
+.addBtnIcon {
+  margin: 0.15rem;
+  color: #2070e0;
+  font-size: 1.75rem;
+  padding: 0.25rem;
+  background-color: white;
+}
+
+.addStoryBtn p {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 2.5px;
 }
