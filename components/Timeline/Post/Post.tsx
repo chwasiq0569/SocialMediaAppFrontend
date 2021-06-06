@@ -7,7 +7,7 @@ export interface PostProps {}
 
 const Post: React.SFC<PostProps> = () => {
   return (
-    <div className={styles.postContainer}>
+    <div className={styles.postContainer + " rounded-md"}>
       <div className={styles.postHeader}>
         <div className={styles.postHeaderleftSide}>
           <div className={styles.profilePicContainer}>

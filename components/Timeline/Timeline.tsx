@@ -72,7 +72,16 @@ const Timline: React.FC<TimlineProps> = () => {
         <Post />
         <Post />
       </div>
-      <div className={styles.suggestionsAndEvents}></div>
+      <div className={styles.suggestionsAndEvents}>
+        <div className={styles.suggesstionsContainer + " rounded-lg"}>
+          <p className={styles.suggesstionsHeading}>Suggesstions for you</p>
+          <img className="rounded-full" src="/assets/images/profileimg.jpg" />
+          <div className={styles.suggestionInfo}>
+            <p className={styles.suggestedProfileName}>Wasiq Abdullah</p>
+            <p className={styles.followText}>Follow</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

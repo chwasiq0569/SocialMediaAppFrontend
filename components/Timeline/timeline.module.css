@@ -6,6 +6,8 @@
   justify-content: space-between;
   background-color: #0f0f13;
   padding-top: 1rem;
+
+  padding-bottom: 4rem;
 }
 .profileInfoSection {
   width: 20%;
@@ -367,4 +369,45 @@
 .reactIconContainer {
   display: flex;
   align-items: center;
+}
+
+.suggesstionsContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem 1.5rem;
+  background-color: rgba(61, 63, 66, 0.25);
+}
+
+.suggesstionsHeading {
+  font-weight: 500;
+  color: white;
+  width: 100%;
+}
+
+.suggesstionsContainer img {
+  margin-top: 2rem;
+  width: 6rem;
+  height: 6rem;
+  object-fit: cover;
+}
+
+.suggestionInfo {
+  margin-top: 2rem;
+}
+
+.suggestedProfileName {
+  color: white;
+  font-weight: 500;
+  text-align: center;
+}
+
+.followText {
+  color: white;
+  text-align: center;
+  text-transform: capitalize;
+  color: #2070e0;
+
+  cursor: pointer;
 }
