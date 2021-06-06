@@ -40,8 +40,27 @@ const Timline: React.FC<TimlineProps> = () => {
                 <p>Add Story</p>
               </div>
             </div>
+            <div className={styles.dullStoryWrapper + " rounded-lg"}></div>
           </div>
-          <div className={styles.dullStoryWrapper + " rounded-lg"}></div>
+          <div
+            style={{
+              backgroundImage: 'url("/assets/images/postimg.jpg")',
+            }}
+            className={`${styles.storyContainer} ${styles.followerStory} rounded-lg`}
+          >
+            <div className={styles.followerProfileStory}>
+              <div
+                className={styles.followerProfileImgWrapper + " rounded-full"}
+              >
+                <img
+                  className="rounded-full"
+                  src="/assets/images/profileimg.jpg"
+                />
+              </div>
+              <p>Wasiq Abdullah</p>
+            </div>
+            <div className={styles.dullStoryWrapper + " rounded-lg"}></div>
+          </div>
         </div>
       </div>
       <div className={styles.suggestionsAndEvents}></div>
