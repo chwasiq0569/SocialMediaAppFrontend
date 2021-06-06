@@ -18,7 +18,7 @@
   align-items: center;
   justify-content: flex-start;
   padding-left: 1.5rem;
-  background-color: rgba(61, 63, 66, 0.35);
+  background-color: rgba(61, 63, 66, 0.25);
 }
 
 .followerProfile {
@@ -60,7 +60,7 @@
 .followersContainer {
   margin-top: 1rem;
   padding: 1.5rem 0;
-  background-color: rgba(61, 63, 66, 0.35);
+  background-color: rgba(61, 63, 66, 0.25);
 }
 
 .followersContainer .followersTitleSection {
@@ -223,7 +223,7 @@
   align-items: center;
   padding: 0 1.5rem;
 
-  background-color: rgba(61, 63, 66, 0.35);
+  background-color: rgba(61, 63, 66, 0.25);
 }
 
 .profilePicContainer {
@@ -233,7 +233,7 @@
 
 .uploadStatusContainer textarea {
   flex: 1;
-  background-color: rgba(61, 63, 66, 0.35);
+  background-color: rgba(61, 63, 66, 0.25);
   height: 3.5rem;
   max-height: 4rem;
   outline: none;
@@ -277,7 +277,7 @@
 }
 
 .postContainer {
-  background-color: rgba(61, 63, 66, 0.35);
+  background-color: rgba(61, 63, 66, 0.25);
   margin-top: 1rem;
   width: 100%;
   height: auto;
