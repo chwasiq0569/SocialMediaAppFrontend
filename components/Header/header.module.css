@@ -11,7 +11,7 @@
 }
 
 .leftSide {
-  width: 22.5%;
+  width: 25%;
 }
 
 .leftSide .logoContainer {
@@ -28,10 +28,13 @@
   object-fit: contain;
 }
 
-.middle_iconsContainer {
-  width: 100%;
+.mainIconsContainer,
+.rightIconsContainer {
   display: flex;
   justify-content: space-evenly;
+}
+.mainIconsContainer {
+  width: 70%;
 }
 
 .middle_iconStyles {
@@ -49,18 +52,17 @@
   cursor: pointer;
 }
 
-.middleSide {
-  width: 55%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .rightSide {
-  width: 22.5%;
+  width: 75%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
 }
+
+.rightIconsContainer {
+  width: 30%;
+}
+
 .right_iconsContainer {
   width: 100%;
   display: flex;

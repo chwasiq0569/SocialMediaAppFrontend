@@ -18,18 +18,18 @@ const Header: React.FC<HeaderProps> = () => {
           <img src="/assets/icons/brandicon.svg" alt="Logo" />
         </div>
       </div>
-      <div className={styles.middleSide}>
-        <div className={styles.middle_iconsContainer}>
+      <div className={styles.rightSide}>
+        <div className={styles.mainIconsContainer}>
           <AiFillHome className={styles.middle_iconStyles} />
           <IoMdVideocam className={styles.middle_iconStyles} />
           <MdBookmark className={styles.middle_iconStyles} />
           <RiMessage2Fill className={styles.middle_iconStyles} />
         </div>
-      </div>
-      <div className={styles.rightSide}>
-        <div className={styles.right_iconsContainer}>
-          <MdNotifications className={styles.end_iconStyles} />
-          <IoMdArrowDropdownCircle className={styles.end_iconStyles} />
+        <div className={styles.rightIconsContainer}>
+          <div className={styles.right_iconsContainer}>
+            <MdNotifications className={styles.end_iconStyles} />
+            <IoMdArrowDropdownCircle className={styles.end_iconStyles} />
+          </div>
         </div>
       </div>
     </div>
