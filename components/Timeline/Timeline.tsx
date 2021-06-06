@@ -5,10 +5,15 @@ import ProfileBar from "./util/ProfileBar";
 import UserProfile from "./util/UserProfile";
 import FollowerStory from "./Story/FollowerStory";
 import AddStory from "./Story/AddStory";
+import { HiEmojiHappy } from "react-icons/hi";
+import { IoMdImage } from "react-icons/io";
+import { IoSendSharp } from "react-icons/io5";
 
 export interface TimlineProps {}
 
 const Timline: React.FC<TimlineProps> = () => {
+  const [postText, setPostText] = React.useState("");
+
   return (
     <div className={styles.timelineWrapper}>
       <div className={styles.profileInfoSection}>
@@ -40,6 +45,27 @@ const Timline: React.FC<TimlineProps> = () => {
             <FollowerStory />
           </div>
         </div>
+        {/*  */}
+        <div className={styles.uploadStatusContainer + " rounded-md"}>
+          <div className={styles.profilePicContainer}>
+            <img
+              className="rounded-full"
+              src="/assets/images/profileimg.jpg"
+              alt="Profile image"
+            />
+          </div>
+          <textarea
+            className="rounded-lg"
+            onChange={(e) => setPostText(e.target.value)}
+            placeholder="Wasiq, what's the latest?"
+          ></textarea>
+          <div className={styles.createPostIconsContainer}>
+            <HiEmojiHappy className={styles.createPostIconsStyles} />
+            <IoMdImage className={styles.createPostIconsStyles} />
+            <IoSendSharp className={styles.createPostIconsStyles} />
+          </div>
+        </div>
+        {/*  */}
       </div>
       <div className={styles.suggestionsAndEvents}></div>
     </div>
