@@ -1,13 +1,14 @@
 import * as React from "react";
 import styles from "./timeline.module.css";
 import FollowerProfile from "./util/FollowerProfile";
-import ProfileBar from "./util/ProfileBar";
 import UserProfile from "./util/UserProfile";
 import FollowerStory from "./Story/FollowerStory";
 import AddStory from "./Story/AddStory";
 import { HiEmojiHappy } from "react-icons/hi";
 import { IoMdImage } from "react-icons/io";
 import { IoSendSharp } from "react-icons/io5";
+
+import Post from "./Post/Post";
 
 export interface TimlineProps {}
 
@@ -66,6 +67,10 @@ const Timline: React.FC<TimlineProps> = () => {
           </div>
         </div>
         {/*  */}
+        <Post />
+        <Post />
+        <Post />
+        <Post />
       </div>
       <div className={styles.suggestionsAndEvents}></div>
     </div>
