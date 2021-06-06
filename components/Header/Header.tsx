@@ -7,10 +7,15 @@ import { MdNotifications } from "react-icons/md";
 import { RiMessage2Fill } from "react-icons/ri";
 import { IoMdArrowDropdownCircle } from "react-icons/io";
 import { IoMdVideocam } from "react-icons/io";
+import { useMediaQuery } from "react-responsive";
 
 export interface HeaderProps {}
 
 const Header: React.FC<HeaderProps> = () => {
+  const isMobilePhone = useMediaQuery({
+    query: "(max-width: 480px)",
+  });
+
   return (
     <div className={styles.headerContainer}>
       <div className={styles.leftSide}>
@@ -21,9 +26,18 @@ const Header: React.FC<HeaderProps> = () => {
       <div className={styles.rightSide}>
         <div className={styles.mainIconsContainer}>
           <AiFillHome className={styles.middle_iconStyles} />
-          <IoMdVideocam className={styles.middle_iconStyles} />
-          <MdBookmark className={styles.middle_iconStyles} />
           <RiMessage2Fill className={styles.middle_iconStyles} />
+          <MdBookmark className={styles.middle_iconStyles} />
+          {isMobilePhone ? (
+            <MdNotifications className={styles.end_iconStyles} />
+          ) : (
+            <IoMdVideocam
+              className={styles.middle_iconStyles + " " + styles.hideOnMobiles}
+            />
+          )}
+          {isMobilePhone ? (
+            <IoMdArrowDropdownCircle className={styles.end_iconStyles} />
+          ) : null}
         </div>
         <div className={styles.rightIconsContainer}>
           <div className={styles.right_iconsContainer}>

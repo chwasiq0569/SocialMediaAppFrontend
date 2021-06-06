@@ -31,23 +31,16 @@
 .mainIconsContainer,
 .rightIconsContainer {
   display: flex;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
 }
 .mainIconsContainer {
   width: 70%;
+  justify-content: space-evenly;
 }
 
 .middle_iconStyles {
   color: white;
   font-size: 1.5rem;
-  opacity: 0.6;
-  cursor: pointer;
-}
-
-.end_iconStyles {
-  color: white;
-  font-size: 1.5rem;
-  margin-left: 1rem;
   opacity: 0.6;
   cursor: pointer;
 }
@@ -67,4 +60,40 @@
   width: 100%;
   display: flex;
   justify-content: flex-end;
+}
+
+.end_iconStyles {
+  color: white;
+  font-size: 1.5rem;
+  opacity: 0.6;
+  cursor: pointer;
+  margin-left: 1.5rem;
+}
+
+@media (max-width: 480px) {
+  .headerContainer {
+    position: absolute;
+    bottom: 0;
+  }
+  .leftSide {
+    display: none;
+  }
+  .rightSide {
+    width: 100%;
+    justify-content: center;
+  }
+  .mainIconsContainer {
+    min-width: 100%;
+    justify-content: space-between;
+  }
+  .right_iconsContainer {
+    display: none;
+    width: 0;
+  }
+  .end_iconStyles {
+    margin: 0;
+  }
+  .hideOnMobiles {
+    display: none;
+  }
 }
