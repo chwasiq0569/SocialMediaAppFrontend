@@ -7,6 +7,7 @@ import AddStory from "./Story/AddStory";
 import { HiEmojiHappy } from "react-icons/hi";
 import { IoMdImage } from "react-icons/io";
 import { IoSendSharp } from "react-icons/io5";
+import ScrollContainer from "react-indiana-drag-scroll";
 
 import Post from "./Post/Post";
 
@@ -32,7 +33,9 @@ const Timline: React.FC<TimlineProps> = () => {
         </div>
       </div>
       <div className={styles.timeline}>
-        <div className={styles.storiesContainer}>
+        <ScrollContainer
+          className={styles.storiesContainer + " scroll-container"}
+        >
           <div className={styles.innerStoriesContainer}>
             <AddStory />
             <FollowerStory />
@@ -45,7 +48,8 @@ const Timline: React.FC<TimlineProps> = () => {
             <FollowerStory />
             <FollowerStory />
           </div>
-        </div>
+        </ScrollContainer>
+
         {/*  */}
         <div className={styles.uploadStatusContainer + " rounded-md"}>
           <div className={styles.profilePicContainer}>

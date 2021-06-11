@@ -119,3 +119,12 @@
     flex-direction: column;
   }
 } */
+.homePageWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #0f0f13;
+  /* overflow: hidden; */
+  padding: 0.2rem;
+}

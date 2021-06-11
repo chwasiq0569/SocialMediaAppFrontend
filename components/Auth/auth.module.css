@@ -3,7 +3,7 @@
   width: 28rem;
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: rgba(61, 63, 66, 0.25);
   border-radius: 15px;
 }
 .signInForm input {
@@ -13,6 +13,8 @@
   margin-top: 1rem;
   border-radius: 6px;
   outline: none;
+  color: white;
+  background-color: rgba(61, 63, 66, 0.25);
 }
 .signInForm button {
   height: 3rem;
@@ -27,7 +29,8 @@
   border: 2px solid #2070e0;
 }
 .loginBtn:hover {
-  background-color: white;
+  background-color: rgba(61, 63, 66, 0.25);
+
   border: 2px solid #2070e0;
   font-weight: 500;
   color: #2070e0;
@@ -49,7 +52,7 @@
 }
 
 .createNewAcc:hover {
-  background-color: white;
+  background-color: rgba(61, 63, 66, 0.25);
   border: 2px solid #3daa28;
   font-weight: 500;
   color: #3daa28;

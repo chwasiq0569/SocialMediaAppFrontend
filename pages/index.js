@@ -13,11 +13,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="w-full	flex flex-col	items-center bg-brand-primary">
-        <Header />
-        {/* <Auth /> */}
-        <Timeline />
-      </main>
+      <div className="w-full flex flex-col items-center bg-brand-primary">
+        <Auth />
+      </div>
     </div>
   );
 }
