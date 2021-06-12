@@ -28,8 +28,7 @@ const Post: React.SFC<PostProps> = () => {
         This is the Post Caption Section Lorem ipsum dolor sit amet consectetur,
         adipisicing elit. Assumenda aperiam laboriosam dignissimos sunt
         aspernatur, maxime asperiores voluptatibus distinctio eligendi non
-        necessitatibus, pariatur tempora, beatae excepturi doloribus
-        exercitationem fugit ab provident!
+        necessitatibus, pariatur!
       </div>
       <div className={styles.postedImageContainer}>
         <img src="/assets/images/postimg.jpg" alt="Posted Image" />
