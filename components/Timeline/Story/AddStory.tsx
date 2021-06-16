@@ -4,7 +4,7 @@ import { BsPlus } from "react-icons/bs";
 
 export interface AddStoryProps {}
 
-const AddStory: React.SFC<AddStoryProps> = () => {
+const AddStory: React.FC<AddStoryProps> = () => {
   return (
     <div
       style={{

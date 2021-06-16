@@ -50,7 +50,6 @@ const Timline: React.FC<TimlineProps> = () => {
           </div>
         </ScrollContainer>
 
-        {/*  */}
         <div className={styles.uploadStatusContainer + " rounded-md"}>
           <div className={styles.profilePicContainer}>
             <img
