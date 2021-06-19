@@ -28,7 +28,7 @@ const Post: React.SFC<PostProps> = ({ post }) => {
           </div>
           <div className={styles.postCreatorInfo}>
             <p className={styles.userDisplayName}>Wasiq Abdullah</p>
-            <p className={styles.timeStamp}></p>
+            <p className={styles.timeStamp}>{post?.createdAt}</p>
           </div>
         </div>
         <div className={styles.rightSide}></div>
@@ -47,7 +47,7 @@ const Post: React.SFC<PostProps> = ({ post }) => {
         <div className={styles.reactionsIcons}>
           <div className={styles.reactIconContainer}>
             <AiFillFire className={styles.reactionIconStyles} />
-            <p>24</p>
+            <p>{post?.likes.length}</p>
           </div>
           <div className={styles.reactIconContainer}>
             <MdBookmark className={styles.reactionIconStyles} />

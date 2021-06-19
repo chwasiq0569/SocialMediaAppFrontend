@@ -80,13 +80,13 @@ const Timline: React.FC<TimlineProps> = () => {
           </div>
         </div>
         {/*  */}
-        {/* {posts.map((post) => (
+        {posts.map((post) => (
           <Post post={post} />
-        ))} */}
+        ))}
+        {/* <Post />
         <Post />
         <Post />
-        <Post />
-        <Post />
+        <Post /> */}
       </div>
       <div className={styles.suggestionsAndEvents}>
         <div className={styles.suggesstionsContainer + " rounded-lg"}>
