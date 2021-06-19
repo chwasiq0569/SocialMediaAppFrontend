@@ -3,9 +3,18 @@ import styles from "./post.module.css";
 import { AiFillFire } from "react-icons/ai";
 import { MdBookmark } from "react-icons/md";
 
-export interface PostProps {}
+export interface PostProps {
+  post: {
+    createdAt: string;
+    desc: string;
+    likes: [string];
+    updatedAt: string;
+    userId: string;
+    _id: string;
+  };
+}
 
-const Post: React.SFC<PostProps> = () => {
+const Post: React.SFC<PostProps> = ({ post }) => {
   return (
     <div className={styles.postContainer + " rounded-md"}>
       <div className={styles.postHeader}>
@@ -19,7 +28,7 @@ const Post: React.SFC<PostProps> = () => {
           </div>
           <div className={styles.postCreatorInfo}>
             <p className={styles.userDisplayName}>Wasiq Abdullah</p>
-            <p className={styles.timeStamp}>Thu 12:45 AM</p>
+            <p className={styles.timeStamp}></p>
           </div>
         </div>
         <div className={styles.rightSide}></div>

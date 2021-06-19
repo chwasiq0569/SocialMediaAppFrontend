@@ -15,6 +15,16 @@ export interface TimlineProps {}
 
 const Timline: React.FC<TimlineProps> = () => {
   const [postText, setPostText] = React.useState("");
+  const [posts, setPosts] = React.useState([]);
+
+  React.useEffect(() => {
+    fetch("http://localhost:8080/api/post/timeline/60b70e3b3e650f05f456a9af")
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        setPosts([...data]);
+      });
+  }, []);
 
   return (
     <div className={styles.timelineWrapper}>
@@ -70,6 +80,9 @@ const Timline: React.FC<TimlineProps> = () => {
           </div>
         </div>
         {/*  */}
+        {/* {posts.map((post) => (
+          <Post post={post} />
+        ))} */}
         <Post />
         <Post />
         <Post />
