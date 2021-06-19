@@ -2,6 +2,7 @@ import * as React from "react";
 import styles from "./post.module.css";
 import { AiFillFire } from "react-icons/ai";
 import { MdBookmark } from "react-icons/md";
+import { format } from "timeago.js";
 
 export interface PostProps {
   post: {
@@ -15,6 +16,18 @@ export interface PostProps {
 }
 
 const Post: React.SFC<PostProps> = ({ post }) => {
+  function convertUTCDateToLocalDate(date) {
+    var newDate = new Date(
+      date.getTime() - date.getTimezoneOffset() * 60 * 1000
+    );
+    return newDate;
+  }
+
+  React.useEffect(() => {
+    let date = convertUTCDateToLocalDate(new Date(post?.createdAt));
+    console.log(date);
+  }, []);
+
   return (
     <div className={styles.postContainer + " rounded-md"}>
       <div className={styles.postHeader}>
@@ -28,7 +41,7 @@ const Post: React.SFC<PostProps> = ({ post }) => {
           </div>
           <div className={styles.postCreatorInfo}>
             <p className={styles.userDisplayName}>Wasiq Abdullah</p>
-            <p className={styles.timeStamp}>{post?.createdAt}</p>
+            <p className={styles.timeStamp}>{format(post?.createdAt)}</p>
           </div>
         </div>
         <div className={styles.rightSide}></div>
