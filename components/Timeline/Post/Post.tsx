@@ -12,22 +12,33 @@ export interface PostProps {
     updatedAt: string;
     userId: string;
     _id: string;
+    image: string;
   };
 }
 
-const Post: React.SFC<PostProps> = ({ post }) => {
-  function convertUTCDateToLocalDate(date) {
-    var newDate = new Date(
-      date.getTime() - date.getTimezoneOffset() * 60 * 1000
-    );
-    return newDate;
-  }
+interface UserTypes {
+  user: {
+    createdAt: string;
+    email: string;
+    followers: [string];
+    followings: [string];
+    isAdmin: boolean;
+    profilePicture: string;
+    username: string;
+  };
+}
+
+const Post: React.FC<PostProps> = ({ post }) => {
+  const [user, setUser] = React.useState<UserTypes | null>(null);
+  const [image, setImage] = React.useState<String>("");
 
   React.useEffect(() => {
-    let date = convertUTCDateToLocalDate(new Date(post?.createdAt));
-    console.log(date);
-  }, []);
+    fetch(post.image)
+      .then((res) => res.json())
+      .then((data) => console.log("DATA", data));
 
+    setImage("http://localhost:8080/public/Images/" + post.userId);
+  }, []);
   return (
     <div className={styles.postContainer + " rounded-md"}>
       <div className={styles.postHeader}>
@@ -40,21 +51,18 @@ const Post: React.SFC<PostProps> = ({ post }) => {
             />
           </div>
           <div className={styles.postCreatorInfo}>
-            <p className={styles.userDisplayName}>Wasiq Abdullah</p>
+            <p className={styles.userDisplayName}>{user && user?.username}</p>
             <p className={styles.timeStamp}>{format(post?.createdAt)}</p>
           </div>
         </div>
         <div className={styles.rightSide}></div>
       </div>
-      <div className={styles.postCaption}>
-        This is the Post Caption Section Lorem ipsum dolor sit amet consectetur,
-        adipisicing elit. Assumenda aperiam laboriosam dignissimos sunt
-        aspernatur, maxime asperiores voluptatibus distinctio eligendi non
-        necessitatibus, pariatur tempora, beatae excepturi doloribus
-        exercitationem fugit ab provident!
-      </div>
+      <div className={styles.postCaption}>{post.desc}</div>
       <div className={styles.postedImageContainer}>
-        <img src="/assets/images/postimg.jpg" alt="Posted Image" />
+        <img
+          src={post?.image ? image : "/assets/images/postimg.jpg"}
+          alt="Posted Image"
+        />
       </div>
       <div className={styles.reactionsContainer}>
         <div className={styles.reactionsIcons}>
