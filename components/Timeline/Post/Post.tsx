@@ -38,8 +38,14 @@ const Post: React.FC<PostProps> = ({ post }) => {
       .get(`http://localhost:8080/api/user/${post.userId}`)
       .then((user) => setUser(user.data));
 
-    setImage("http://localhost:8080/Images/" + post.image);
+    setImage("http://localhost:8080/postImages/" + post.image);
   }, []);
+
+  const likePost = () => {
+    axios
+      .put(`http://localhost:8080/api/post/${post._id}/like`)
+      .then((data) => console.log(data));
+  };
 
   return (
     <div className={styles.postContainer + " rounded-md"}>
@@ -68,7 +74,7 @@ const Post: React.FC<PostProps> = ({ post }) => {
       </div>
       <div className={styles.reactionsContainer}>
         <div className={styles.reactionsIcons}>
-          <div className={styles.reactIconContainer}>
+          <div className={styles.reactIconContainer} onClick={likePost}>
             <AiFillFire className={styles.reactionIconStyles} />
             <p>{post?.likes.length}</p>
           </div>
