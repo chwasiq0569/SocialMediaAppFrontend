@@ -1,8 +1,9 @@
 import * as React from "react";
 import styles from "./post.module.css";
-import { AiFillFire } from "react-icons/ai";
+import { AiFillFire, AiOutlineConsoleSql } from "react-icons/ai";
 import { MdBookmark } from "react-icons/md";
 import { format } from "timeago.js";
+import axios from "axios";
 
 export interface PostProps {
   post: {
@@ -29,16 +30,17 @@ interface UserTypes {
 }
 
 const Post: React.FC<PostProps> = ({ post }) => {
-  const [user, setUser] = React.useState<UserTypes | null>(null);
+  const [user, setUser] = React.useState<UserTypes | {}>({});
   const [image, setImage] = React.useState<String>("");
 
   React.useEffect(() => {
-    fetch(post.image)
-      .then((res) => res.json())
-      .then((data) => console.log("DATA", data));
+    axios
+      .get(`http://localhost:8080/api/user/${post.userId}`)
+      .then((user) => setUser(user.data));
 
-    setImage("http://localhost:8080/public/Images/" + post.userId);
+    setImage("http://localhost:8080/Images/" + post.image);
   }, []);
+
   return (
     <div className={styles.postContainer + " rounded-md"}>
       <div className={styles.postHeader}>
