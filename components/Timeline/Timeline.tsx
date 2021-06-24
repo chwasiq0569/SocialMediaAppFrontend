@@ -83,14 +83,10 @@ const Timline: React.FC<TimlineProps> = ({ posts }) => {
             <IoSendSharp className={styles.createPostIconsStyles} />
           </div>
         </div>
-        {/*  */}
         {posts.map((post) => (
           <Post key={post._id} post={post} />
         ))}
-        {/* <Post />
-        <Post />
-        <Post />
-        <Post /> */}
+        
       </div>
       <div className={styles.suggestionsAndEvents}>
         <div className={styles.suggesstionsContainer + " rounded-lg"}>
