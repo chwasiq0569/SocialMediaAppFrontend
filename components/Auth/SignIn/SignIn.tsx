@@ -31,6 +31,8 @@ const SignIn: React.FC<SignInProps> = ({ setFormStatus }) => {
         if (res.status === 1) {
           console.log(res);
           router.replace("/Home");
+          localStorage.setItem("token", res.token);
+          localStorage.setItem("user", JSON.stringify(res.user));
         }
         setLoading(false);
       })
